@@ -1,0 +1,54 @@
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: coffeeshop-useropers
+  namespace: default
+spec:
+  selector:
+    # deployment identifier
+    app: useropers
+  # externalTrafficPolicy: Local
+  ports:
+    - protocol: TCP
+      port: 80
+      # targetPort: 30080
+      nodePort: 30080
+  # clusterIP: 10.96.0.9
+  # loadBalancerIP: 78.11.24.19
+  # type: NodePort
+  type: NodePort
+---
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: coffeeshop-useropers
+  namespace: default
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        # svc identifier
+        app: useropers
+        # version: v1 # 这个模块目前不需要 version 标签定位, UI 表现层需要, 用于A/B测试
+    spec:
+      containers:
+      - name: coffeeshop-useropers
+        image: xinyaotian/user-opers:1.0.0
+        imagePullPolicy: IfNotPresent
+        env:
+        - name: POSTGRES_USERNAME
+          value: "dbuser"
+        - name: POSTGRES_PASSWORD
+          value: "love_coffee"
+        - name: POSTGRES_PROTOCOL
+          value: "postgres"
+        - name: POSTGRES_SSLMODE
+          value: "disable"
+        - name: POSTGRES_DBNAME
+          value: "coffeeshop"
+        ports:
+        - containerPort: 80
+---
+
