@@ -35,7 +35,7 @@ spec:
     spec:
       containers:
       - name: coffeeshop-useropers
-        image: xinyaotian/user-opers:1.0.0
+        image: xinyaotian/user-opers:1.0
         imagePullPolicy: IfNotPresent
         env:
         - name: POSTGRES_USERNAME

@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="676f2adc-375f-4184-b3ea-79bb4b7c76e2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/userops.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/postgres-and-userops.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/postgres-and-userops.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/userops.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/userops.yaml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -78,8 +78,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/postgres-and-userops.yaml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="102" lean-forward="true" selection-start-line="48" selection-end-line="102" />
+            <state relative-caret-position="1445">
+              <caret line="85" column="40" lean-forward="true" selection-start-line="85" selection-start-column="40" selection-end-line="85" selection-end-column="40" />
             </state>
           </provider>
         </entry>
@@ -87,8 +87,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/userops.yaml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="54" selection-start-line="54" selection-end-line="54" />
+            <state>
+              <caret lean-forward="true" />
             </state>
           </provider>
         </entry>
@@ -106,8 +106,8 @@
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="459">
-                <caret line="36" column="35" selection-start-line="36" selection-start-column="35" selection-end-line="36" selection-end-column="35" />
+              <first_editor relative-caret-position="190">
+                <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
               </first_editor>
               <second_editor />
             </state>
@@ -122,11 +122,11 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/postgres-and-userops.yaml" />
         <option value="$PROJECT_DIR$/postgres-volumn.yaml" />
         <option value="$PROJECT_DIR$/postgres.yaml" />
         <option value="$PROJECT_DIR$/postgres-volume.yaml" />
         <option value="$PROJECT_DIR$/userops.yaml" />
+        <option value="$PROJECT_DIR$/postgres-and-userops.yaml" />
         <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
@@ -246,20 +246,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/postgres-and-userops.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="102" lean-forward="true" selection-start-line="48" selection-end-line="102" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/userops.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="54" selection-start-line="54" selection-end-line="54" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/postgres-volume.yaml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="207">
@@ -267,11 +253,25 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/userops.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret lean-forward="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/postgres-and-userops.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1445">
+          <caret line="85" column="40" lean-forward="true" selection-start-line="85" selection-start-column="40" selection-end-line="85" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="459">
-            <caret line="36" column="35" selection-start-line="36" selection-start-column="35" selection-end-line="36" selection-end-column="35" />
+          <first_editor relative-caret-position="190">
+            <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
           </first_editor>
           <second_editor />
         </state>

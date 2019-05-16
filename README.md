@@ -30,7 +30,7 @@
 
 2. 待相应的 pods 和 svc 准备就绪后，进入相应的 pod
 
-``` $ kubectl exec -it <user-opers-pod-hash-code> /bin/bash```
+``` $ kubectl exec -it <coffeeshop-useropers-hash-code> /bin/bash```
 
 3. 在进入后的 pod 中，输入 flask-sqlalchemy 自动将数据库升级
 
