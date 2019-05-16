@@ -1,0 +1,65 @@
+# 在使用 kubectl apply -f 之前，请先使用 mkdir 创建相应挂载点的目录
+# $ mkdir -p /var/k8s/postgres/data
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: coffeeshop-postgres
+  namespace: default
+spec:
+  selector:
+    # deployment identifier
+    app: postgres
+  # externalTrafficPolicy: Local
+  ports:
+    - protocol: TCP
+      port: 5432
+      # targetPort: 31432
+      nodePort: 31432
+  # clusterIP: 10.96.0.9
+  # loadBalancerIP: 78.11.24.19
+  # type: NodePort
+  type: NodePort
+---
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: coffeeshop-postgres
+  namespace: default
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        # svc identifier
+        app: postgres
+        # version: v1 # 这个模块目前不需要 version 标签定位, UI 表现层需要, 用于A/B测试
+    spec:
+      containers:
+      - name: microweb-dbmanager
+        image: postgres:10
+        imagePullPolicy: IfNotPresent
+        env:
+        - name: POSTGRES_USER
+          value: "dbuser"
+        - name: POSTGRES_DB
+          value: "coffeeshop"
+        - name: POSTGRES_PASSWORD
+          value: "love_coffee"
+        ports:
+        - containerPort: 5432
+        volumeMounts:
+        - mountPath: /var/lib/postgresql/data
+          name: postgres-db-data
+#        resources:
+#          limits:
+#            cpu: "0.3"
+#            memory: 256Mi
+#          requests:
+#            cpu: "0.1"
+#            memory: 32Mi
+      volumes:
+      - name: postgres-db-data
+        hostPath:
+          path: /var/k8s/postgres/data
+---
